@@ -1,31 +1,1251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rod Christopher Barit</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rod Christopher L. Barit, CFA, CMT, FRM — Quantitative Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #042C53;
+    --navy-mid: #0C447C;
+    --navy-bright: #185FA5;
+    --navy-light: #378ADD;
+    --sky: #85B7EB;
+    --sky-pale: #B5D4F4;
+    --sky-ghost: #E6F1FB;
+    --gold: #BA7517;
+    --gold-light: #EF9F27;
+    --gold-pale: #FAEEDA;
+    --white: #FAFAF8;
+    --off: #F1EFE8;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-muted: #6b6b6b;
+    --ink-faint: #a0a0a0;
+    --border: rgba(4,44,83,0.12);
+    --border-strong: rgba(4,44,83,0.22);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 68px;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--navy-bright); }
+
+  .nav-cta {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--navy);
+    border: none;
+    padding: 0.55rem 1.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--navy-bright); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 68px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 3rem 5rem 4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-name strong {
+    font-weight: 600;
+    display: block;
+  }
+
+  .hero-creds {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--navy-bright);
+    letter-spacing: 0.04em;
+    margin-bottom: 2.4rem;
+  }
+
+  .hero-title {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink-mid);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 3rem;
+    border-left: 2px solid var(--gold-light);
+    padding-left: 1.2rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy-mid);
+    background: var(--sky-ghost);
+    border: 1px solid var(--sky-pale);
+    padding: 0.35rem 0.85rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .btn-primary {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--navy);
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--navy-bright); transform: translateY(-1px); }
+
+  .btn-ghost {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-ghost:hover { background: var(--navy); color: var(--white); }
+
+  .hero-right {
+    position: relative;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-bright) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-visual {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .hero-monogram {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2.5rem;
+  }
+
+  .hero-monogram span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.12);
+    margin-top: 0;
+  }
+
+  .hero-stat {
+    padding: 1.2rem 1.5rem;
+    background: rgba(4,44,83,0.6);
+    text-align: left;
+  }
+
+  .hero-stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    line-height: 1;
+    display: block;
+  }
+
+  .hero-stat-label {
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .scroll-indicator::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: var(--border-strong);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    color: var(--ink-mid);
+    line-height: 1.85;
+    margin-bottom: 1.4rem;
+  }
+
+  .about-text p:first-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  .advocacy-card {
+    background: var(--navy);
+    color: white;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .advocacy-card::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.06);
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+
+  .advocacy-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .advocacy-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+    position: relative;
+    z-index: 1;
+  }
+
+  .advocacy-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin-top: 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--off); }
+
+  #experience > div { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0;
+    width: 1px;
+    background: var(--border-strong);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 3.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .timeline-item:last-child { padding-bottom: 0; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 0.55rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--navy-bright);
+    border: 2px solid var(--off);
+    box-shadow: 0 0 0 1px var(--navy-bright);
+  }
+
+  .timeline-dot.active {
+    background: var(--gold-light);
+    box-shadow: 0 0 0 1px var(--gold-light);
+  }
+
+  .timeline-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .timeline-period {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .timeline-period.current {
+    color: var(--gold);
+  }
+
+  .timeline-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+  }
+
+  .timeline-org {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--navy-bright);
+    margin-bottom: 0.9rem;
+    letter-spacing: 0.01em;
+  }
+
+  .timeline-desc {
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 640px;
+  }
+
+  .timeline-desc li {
+    margin-bottom: 0.35rem;
+    list-style: none;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .timeline-desc li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--ink-faint);
+    font-size: 0.8rem;
+  }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--white); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+  }
+
+  .skill-block {
+    background: var(--white);
+    padding: 2.2rem;
+  }
+
+  .skill-block-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .skill-block-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+  }
+
+  .skill-item:last-child { border-bottom: none; }
+
+  .skill-bar {
+    width: 80px;
+    height: 2px;
+    background: var(--border);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .skill-bar-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--navy-bright);
+  }
+
+  /* ── EDUCATION & CERTS ── */
+  #education { background: var(--navy); padding: 0; }
+
+  #education > div { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; }
+
+  #education .section-title,
+  #education .section-number { color: rgba(255,255,255,0.4); }
+
+  #education .section-title { color: rgba(255,255,255,0.9); }
+
+  #education .section-line { background: rgba(255,255,255,0.1); }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .edu-card {
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 2rem 2.2rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .edu-card:hover { border-color: rgba(255,255,255,0.3); }
+
+  .edu-school {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.7rem;
+  }
+
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+  }
+
+  .edu-detail {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+  }
+
+  .chevening-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+    padding: 0.25rem 0.7rem;
+    margin-top: 0.8rem;
+  }
+
+  .certs-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1.5rem;
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .cert-item {
+    background: var(--navy);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .cert-abbr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 0.3rem;
+    line-height: 1;
+  }
+
+  .cert-name {
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .contact-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-sub {
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.88rem;
+    color: var(--navy);
+    text-decoration: none;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .contact-link:hover {
+    background: var(--sky-ghost);
+    border-color: var(--sky-pale);
+    transform: translateX(4px);
+  }
+
+  .contact-link-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--sky-ghost);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    color: var(--navy-bright);
+    font-weight: 700;
+    letter-spacing: 0;
+    font-family: monospace;
+  }
+
+  .contact-link-text { flex: 1; }
+  .contact-link-label {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.1rem;
+  }
+  .contact-link-value { font-size: 0.9rem; font-weight: 400; color: var(--navy); }
+
+  .availability {
+    background: var(--navy);
+    padding: 2.5rem;
+    color: white;
+  }
+
+  .avail-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .avail-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .avail-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .avail-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .avail-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .avail-tag-pill {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-note {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    #hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 3rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    #experience > div { padding: 4rem 1.5rem; }
+    #education > div { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .certs-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    .scroll-indicator { display: none; }
+  }
+</style>
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <h1>Rod Christopher Barit</h1>
-      <p class="tagline">Finance &times; Technology &rarr; Financial Inclusion</p>
-    </section>
 
-    <section class="about">
-      <p>
-        I work at the intersection of <strong>finance and technology</strong> to
-        promote <strong>financial inclusion</strong> — building systems and
-        solutions that make financial services accessible to everyone.
-      </p>
-    </section>
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Rod C. Barit</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://www.linkedin.com/in/rodbarit/" target="_blank" class="nav-cta">LinkedIn</a>
+</nav>
 
-    <section class="links">
-      <a href="mailto:rodbarit@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/rodbarit" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/rodbarit" target="_blank" rel="noopener">GitHub</a>
-    </section>
-  </main>
+<!-- HERO -->
+<section id="hero" style="padding: 0; max-width: none;">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Quantitative Researcher &amp; Finance Professional</div>
+    <h1 class="hero-name">
+      Rod Christopher<br>
+      <strong>L. Barit</strong>
+    </h1>
+    <p class="hero-creds">CFA · CMT · FRM</p>
+    <p class="hero-title">
+      Quantitative researcher bridging the worlds of finance and technology — building systematic investment strategies and advocating for financial inclusion through data-driven innovation.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">Chevening Scholar '23/24</span>
+      <span class="badge">MSc Finance Analytics · KCL</span>
+      <span class="badge">AWS ML Specialty</span>
+      <span class="badge">Metro Manila, PH</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <a href="#experience" class="btn-ghost">View Experience</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-visual">
+      <div class="hero-monogram">
+        <span>RB</span>
+      </div>
+      <div class="hero-stat-grid">
+        <div class="hero-stat">
+          <span class="hero-stat-number">10+</span>
+          <span class="hero-stat-label">Years in Finance</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">3</span>
+          <span class="hero-stat-label">Charter Designations</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">2</span>
+          <span class="hero-stat-label">AWS Certifications</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">MSc</span>
+          <span class="hero-stat-label">Finance Analytics · KCL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-number fade-up">01</span>
+    <h2 class="section-title fade-up stagger-1">About</h2>
+    <div class="section-line fade-up stagger-2"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="fade-up">A quantitative researcher and finance professional with over a decade of demonstrated excellence across investment management, portfolio management, and systematic trading research.</p>
+      <p class="fade-up stagger-1">Currently serving as a Quantitative Researcher at Phitopolis and Lecturer at Ateneo de Manila University, Rod designs and refines systematic investment strategies by bridging rigorous academic research with practical application. He leverages Python, machine learning, and advanced statistical modeling to develop predictive trading signals and optimize portfolio performance.</p>
+      <p class="fade-up stagger-2">Rod's career spans institutional investment management at Sun Life and Bank of the Philippine Islands, where he managed equity portfolios across retirement and pre-need accounts. As a UK Government Chevening Scholar, he pursued an MSc in Finance Analytics at King's College London — publishing research on empirical asset pricing via machine learning in emerging markets.</p>
+      <p class="fade-up stagger-3">Beyond research, Rod is a Toastmasters charter president, civic technology advocate, and community builder — connecting professionals at the intersection of finance, technology, and public service.</p>
+    </div>
+    <div class="fade-up stagger-2">
+      <div class="advocacy-card">
+        <span class="advocacy-tag">Core Advocacy</span>
+        <p class="advocacy-quote">Financial inclusion through technology</p>
+        <p class="advocacy-desc">Leveraging quantitative finance, machine learning, and fintech to make financial systems more accessible, equitable, and efficient — particularly for underserved communities in emerging markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<div id="experience" style="background: var(--off);">
+  <div>
+    <div class="section-header">
+      <span class="section-number fade-up" style="color: var(--ink-faint);">02</span>
+      <h2 class="section-title fade-up stagger-1">Experience</h2>
+      <div class="section-line fade-up stagger-2"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period current">Aug 2025 – Present</span>
+        </div>
+        <div class="timeline-role">Lecturer</div>
+        <div class="timeline-org">Ateneo de Manila University · Part-time, Hybrid</div>
+        <ul class="timeline-desc">
+          <li>Teaching finance and quantitative methods to graduate-level students</li>
+          <li>Bringing practitioner insight from systematic trading research into the classroom</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-up stagger-1">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period current">Feb 2025 – Present</span>
+        </div>
+        <div class="timeline-role">Quantitative Researcher</div>
+        <div class="timeline-org">Phitopolis · Full-time, On-site</div>
+        <ul class="timeline-desc">
+          <li>Design and refine systematic investment strategies by analyzing academic and practitioner literature</li>
+          <li>Develop and backtest quantitative models using Python (pandas, NumPy, scikit-learn), applying machine learning to large-scale financial data to produce predictive trading signals</li>
+          <li>Conduct rigorous statistical analysis and modeling experiments to validate signals, manage risk, and optimize strategy performance</li>
+          <li>Collaborate with portfolio managers and engineers to translate research into deployable trading solutions</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-up stagger-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period">Oct 2021 – Jul 2023</span>
+        </div>
+        <div class="timeline-role">Equity Portfolio Manager</div>
+        <div class="timeline-org">Sun Life Philippines · Full-time</div>
+        <ul class="timeline-desc">
+          <li>Managed equity funds across institutional and retail mandates</li>
+          <li>Conducted fundamental and technical analysis to drive investment decisions</li>
+          <li>Served concurrently as Equities Central Dealer (Jan 2017 – Oct 2022)</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-up stagger-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period">Dec 2014 – Dec 2016</span>
+        </div>
+        <div class="timeline-role">Associate Portfolio Manager</div>
+        <div class="timeline-org">Bank of the Philippine Islands (BPI)</div>
+        <ul class="timeline-desc">
+          <li>Managed the equity portfolio of retirement and pre-need accounts</li>
+          <li>Previously served as Investment Analyst (Jan 2013 – Nov 2014), conducting equity research and financial analysis</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item fade-up stagger-4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span class="timeline-period">Jun 2011 – Mar 2012</span>
+        </div>
+        <div class="timeline-role">Jesuit Volunteer</div>
+        <div class="timeline-org">Jesuit Volunteers Philippines Foundation, Inc. (JVPFI)</div>
+        <ul class="timeline-desc">
+          <li>Dedicated a year to community service, reflecting a lifelong commitment to social impact</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header">
+    <span class="section-number fade-up">03</span>
+    <h2 class="section-title fade-up stagger-1">Skills &amp; Expertise</h2>
+    <div class="section-line fade-up stagger-2"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-block fade-up">
+      <div class="skill-block-title">Quantitative Finance</div>
+      <div class="skill-item"><span>Portfolio Management</span><div class="skill-bar"><div class="skill-bar-fill" style="width:98%"></div></div></div>
+      <div class="skill-item"><span>Systematic Trading</span><div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+      <div class="skill-item"><span>Risk Management (FRM)</span><div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+      <div class="skill-item"><span>Technical Analysis (CMT)</span><div class="skill-bar"><div class="skill-bar-fill" style="width:93%"></div></div></div>
+      <div class="skill-item"><span>CFA Investment Analysis</span><div class="skill-bar"><div class="skill-bar-fill" style="width:97%"></div></div></div>
+      <div class="skill-item"><span>Bloomberg Terminal</span><div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+    </div>
+    <div class="skill-block fade-up stagger-1">
+      <div class="skill-block-title">Technology &amp; Data</div>
+      <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+      <div class="skill-item"><span>pandas &amp; NumPy</span><div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><span>scikit-learn / ML</span><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><span>Data Science</span><div class="skill-bar"><div class="skill-bar-fill" style="width:87%"></div></div></div>
+      <div class="skill-item"><span>Bash / Shell</span><div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div></div>
+      <div class="skill-item"><span>Big Data Analytics</span><div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div></div>
+    </div>
+    <div class="skill-block fade-up stagger-2">
+      <div class="skill-block-title">Cloud &amp; Research</div>
+      <div class="skill-item"><span>AWS ML Specialty</span><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><span>AWS AI Practitioner</span><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><span>Empirical Asset Pricing</span><div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+      <div class="skill-item"><span>Backtesting &amp; Validation</span><div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+      <div class="skill-item"><span>Statistical Modeling</span><div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+      <div class="skill-item"><span>Financial Inclusion</span><div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & CERTS -->
+<div id="education">
+  <div>
+    <div class="section-header">
+      <span class="section-number fade-up">04</span>
+      <h2 class="section-title fade-up stagger-1">Education &amp; Certifications</h2>
+      <div class="section-line fade-up stagger-2" style="background: rgba(255,255,255,0.1);"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card fade-up">
+        <div class="edu-school">King's College London</div>
+        <div class="edu-degree">MSc Finance Analytics</div>
+        <div class="edu-detail">
+          Sep 2023 – Sep 2024<br>
+          Research: Empirical Asset Pricing via Machine Learning in EM (Philippines)<br>
+          Focus: Big Data Analytics, Machine Learning in Finance
+        </div>
+        <span class="chevening-tag">UK Government Chevening Scholar</span>
+      </div>
+      <div class="edu-card fade-up stagger-1">
+        <div class="edu-school">Ateneo de Manila University</div>
+        <div class="edu-degree">Master's, Applied Mathematics<br>Major in Mathematical Finance</div>
+        <div class="edu-detail">2010 – 2011</div>
+      </div>
+      <div class="edu-card fade-up stagger-2">
+        <div class="edu-school">Ateneo de Manila University</div>
+        <div class="edu-degree">Bachelor's Degree</div>
+        <div class="edu-detail">Undergraduate studies at one of the Philippines' premier institutions.</div>
+      </div>
+      <div class="edu-card fade-up stagger-3">
+        <div class="edu-school">Amazon Web Services</div>
+        <div class="edu-degree">AWS Certifications (2025)</div>
+        <div class="edu-detail">
+          AWS Certified Machine Learning – Specialty<br>
+          Issued Nov 2025 · Expires Nov 2028<br><br>
+          AWS Certified AI Practitioner<br>
+          Issued Sep 2025 · Expires Sep 2028
+        </div>
+      </div>
+    </div>
+
+    <div class="certs-title fade-up">Professional Designations</div>
+    <div class="certs-grid fade-up stagger-1">
+      <div class="cert-item">
+        <span class="cert-abbr">CFA</span>
+        <span class="cert-name">Chartered Financial Analyst<br>CFA Institute</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-abbr">CMT</span>
+        <span class="cert-name">Chartered Market Technician<br>CMT Association</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-abbr">FRM</span>
+        <span class="cert-name">Financial Risk Manager<br>GARP</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-abbr">AWS</span>
+        <span class="cert-name">ML Specialty &amp; AI Practitioner<br>Amazon Web Services</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-number fade-up">05</span>
+    <h2 class="section-title fade-up stagger-1">Let's Connect</h2>
+    <div class="section-line fade-up stagger-2"></div>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-intro fade-up">Open to opportunities at the frontier of finance and technology.</p>
+      <p class="contact-sub fade-up stagger-1">Whether you're building the next generation of fintech, quantitative investment platforms, or looking for a finance professional with deep technical expertise — I'd love to connect.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/rodbarit/" target="_blank" class="contact-link fade-up stagger-2">
+          <div class="contact-link-icon">in</div>
+          <div class="contact-link-text">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">linkedin.com/in/rodbarit</span>
+          </div>
+          <span style="color: var(--ink-faint); font-size: 0.8rem;">↗</span>
+        </a>
+        <a href="mailto:rodbarit@gmail.com" class="contact-link fade-up stagger-3">
+          <div class="contact-link-icon">@</div>
+          <div class="contact-link-text">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">rodbarit@gmail.com</span>
+          </div>
+          <span style="color: var(--ink-faint); font-size: 0.8rem;">↗</span>
+        </a>
+        <div class="contact-link fade-up stagger-4" style="cursor: default;">
+          <div class="contact-link-icon" style="font-size: 0.65rem;">📍</div>
+          <div class="contact-link-text">
+            <span class="contact-link-label">Location</span>
+            <span class="contact-link-value">Metro Manila, Philippines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="availability fade-up stagger-2">
+      <div class="avail-tag">Open to Opportunities</div>
+      <div class="avail-title">Available for roles in quantitative finance, fintech, and financial technology leadership.</div>
+      <div class="avail-desc">With a rare combination of CFA, CMT, and FRM designations alongside hands-on machine learning and cloud certifications, Rod brings a uniquely comprehensive skill set to finance and technology organizations.</div>
+      <div class="avail-interests">
+        <span class="avail-tag-pill">Quant Research</span>
+        <span class="avail-tag-pill">Portfolio Management</span>
+        <span class="avail-tag-pill">Fintech</span>
+        <span class="avail-tag-pill">Financial Inclusion</span>
+        <span class="avail-tag-pill">ML in Finance</span>
+        <span class="avail-tag-pill">Asset Management</span>
+        <span class="avail-tag-pill">Risk Management</span>
+        <span class="avail-tag-pill">Academia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Rod Christopher L. Barit, CFA, CMT, FRM</div>
+  <div class="footer-note">Quantitative Researcher · Metro Manila, Philippines · 2025</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
