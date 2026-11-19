@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rod Christopher L. Barit, CFA, CMT, FRM — Quantitative Researcher</title>
 <meta name="description" content="Rod Christopher L. Barit is a quantitative researcher in Metro Manila building systematic investment strategies and working toward financial inclusion through technology.">
-<meta name="theme-color" content="#f4f0e7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151410" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://rodbarit.github.io/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23a63d1a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='700' font-size='16' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rod Christopher L. Barit — Quantitative Researcher">
 <meta property="og:description" content="Systematic investing, machine learning in finance, and financial inclusion. Metro Manila, Philippines.">
@@ -16,359 +16,327 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f4f0e7;
-    --ink: #1c1b17;
-    --body: #35332c;
-    --muted: #6d675a;
-    --rule: #d3cbb9;
-    --accent: #a63d1a;
-    --serif: 'Newsreader', 'Iowan Old Style', Palatino, Georgia, serif;
-    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --bg: #ffffff;
+    --ink: #0f1115;
+    --soft: #9a9ea8;
+    --muted: #6b7079;
+    --card: #f4f5f7;
+    --line: #e6e8ec;
+    --accent: #0b7a5b;
+    --btn-bg: #0f1115;
+    --btn-ink: #ffffff;
+    --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   }
-
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #151410;
-      --ink: #efe9dc;
-      --body: #cfc9ba;
-      --muted: #988f7d;
-      --rule: #38352c;
-      --accent: #e8855f;
+      --bg: #0b0b0d;
+      --ink: #f4f4f5;
+      --soft: #55585f;
+      --muted: #9ca0a9;
+      --card: #16171a;
+      --line: #25272c;
+      --accent: #4ade9d;
+      --btn-bg: #f4f4f5;
+      --btn-ink: #0b0b0d;
     }
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
   body {
     margin: 0;
     background: var(--bg);
-    color: var(--body);
-    font-family: var(--serif);
-    font-size: 1.1875rem;
-    line-height: 1.65;
-    font-optical-sizing: auto;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-  a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
-  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
 
-  .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem; }
-
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: 1.75rem 0;
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-    color: var(--muted);
+  /* nav */
+  .nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(14px);
   }
-  .topbar nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-  .topbar a { text-decoration: none; padding: 0.25rem 0; }
-
-  .intro { padding: clamp(3rem, 10vw, 7rem) 0 clamp(3rem, 8vw, 5rem); }
-
-  .kicker {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 1.5rem;
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 4.5rem; gap: 1rem; }
+  .brand { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+  .links { display: flex; gap: 1.75rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .links a:hover { color: var(--ink); }
+  .actions { display: flex; align-items: center; gap: 1rem; }
+  .icon { width: 1.4rem; height: 1.4rem; display: block; }
+  .pill {
+    background: var(--btn-bg); color: var(--btn-ink);
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.7rem 1.4rem; border-radius: 999px;
+    transition: opacity 0.15s;
   }
+  .pill:hover { opacity: 0.8; }
 
+  /* hero */
+  .hero { padding: clamp(4rem, 12vw, 9rem) 0 clamp(3rem, 7vw, 5rem); }
   h1 {
-    font-size: clamp(2.6rem, 9vw, 4.75rem);
-    font-weight: 400;
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    color: var(--ink);
-    margin: 0 0 0.9rem;
-  }
-  h1 em { font-style: italic; }
-
-  .creds {
-    font-family: var(--mono);
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin: 0 0 2.5rem;
-  }
-
-  .lede {
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
-    line-height: 1.45;
-    color: var(--ink);
-    max-width: 36rem;
     margin: 0;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
   }
-
-  section { border-top: 1px solid var(--rule); padding: 2.75rem 0 3.25rem; }
-
-  .row {
-    display: grid;
-    grid-template-columns: 11rem 1fr;
-    gap: 0.5rem 2.5rem;
-  }
-
-  h2 {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  h1 .soft { display: block; color: var(--soft); }
+  .intro {
+    margin: 2.25rem 0 0;
+    max-width: 40rem;
+    font-size: clamp(1.2rem, 2.6vw, 1.65rem);
+    line-height: 1.5;
+    letter-spacing: -0.01em;
     color: var(--muted);
-    margin: 0.35rem 0 0;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; }
+  .tag {
+    font-size: 0.8rem; font-weight: 500; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 0.35rem 0.9rem;
   }
 
-  p { margin: 0 0 1.25rem; }
-  p:last-child { margin-bottom: 0; }
-  .em { color: var(--ink); font-weight: 500; }
-
-  .job { margin: 0 0 2.5rem; }
-  .job:last-child { margin-bottom: 0; }
-  .job .when {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.03em;
-    color: var(--muted);
-    margin: 0 0 0.35rem;
+  /* sections */
+  section { padding: 3.5rem 0 1rem; }
+  .label {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 1.25rem;
   }
-  .job .when.now { color: var(--accent); }
-  .job h3 { font-size: 1.35rem; font-weight: 500; line-height: 1.25; color: var(--ink); margin: 0; }
-  .job .org { font-style: italic; color: var(--muted); margin: 0.1rem 0 0.75rem; font-size: 1.05rem; }
-  .job ul { margin: 0; padding-left: 1.1rem; font-size: 1.05rem; }
-  .job li { margin-bottom: 0.4rem; padding-left: 0.2rem; }
-  .job li::marker { color: var(--accent); }
-
-  dl { margin: 0; }
-  dt {
-    font-family: var(--mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    margin: 0 0 0.3rem;
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .grid.one { grid-template-columns: 1fr; }
+  .card {
+    background: var(--card);
+    border-radius: 1.75rem;
+    padding: 2.25rem;
+    display: flex; flex-direction: column;
   }
-  dd { margin: 0 0 1.6rem; font-size: 1.05rem; }
-  dd:last-child { margin-bottom: 0; }
+  .card.wide { grid-column: 1 / -1; }
+  .eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 1.1rem; }
+  .eyebrow.now { color: var(--accent); }
+  .card h3 { margin: 0 0 0.25rem; font-size: 1.5rem; font-weight: 600; letter-spacing: -0.025em; line-height: 1.2; }
+  .card .sub { margin: 0 0 1rem; color: var(--muted); font-size: 0.95rem; }
+  .card p { margin: 0 0 1rem; color: var(--muted); }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: 0.95rem; }
+  .card li { margin-bottom: 0.45rem; }
+  .card li::marker { color: var(--soft); }
+  .statement { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.25; color: var(--ink); margin: 0 0 1rem; max-width: 36rem; }
+  .small { font-size: 0.85rem; color: var(--muted); }
 
-  .edu { margin: 0 0 1.9rem; }
-  .edu:last-child { margin-bottom: 0; }
-  .edu h3 { font-size: 1.2rem; font-weight: 500; color: var(--ink); margin: 0; line-height: 1.3; }
-  .edu .where { font-style: italic; color: var(--muted); margin: 0.05rem 0 0.35rem; font-size: 1.05rem; }
-  .edu p { font-size: 1.05rem; }
-  .small { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em; }
 
-  .contact-list { list-style: none; margin: 1.75rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
-  .contact-list li { border-bottom: 1px solid var(--rule); }
-  .contact-list a, .contact-list .static {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.9rem 0;
-    text-decoration: none;
-    color: var(--ink);
-    transition: padding 0.15s, color 0.15s;
+  /* logos */
+  .logos { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.5rem; }
+  .logo {
+    background: #fff; border-radius: 0.9rem;
+    width: 8.5rem; height: 4rem; padding: 0.6rem 0.9rem;
+    display: flex; align-items: center; justify-content: center;
   }
-  .contact-list a:hover, .contact-list a:focus-visible { color: var(--accent); padding-left: 0.5rem; }
-  .contact-list .hint { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+  .logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain; }
 
-  footer {
-    border-top: 1px solid var(--rule);
-    padding: 1.75rem 0 3rem;
-    font-family: var(--mono);
-    font-size: 0.75rem;
-    color: var(--muted);
-    letter-spacing: 0.02em;
+  /* skills */
+  .skillset { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.25rem; }
+  .skillset span {
+    background: var(--bg); border-radius: 999px; padding: 0.3rem 0.85rem;
+    font-size: 0.85rem; font-weight: 500; color: var(--ink);
   }
+
+  /* contact */
+  .contact h2 { font-size: clamp(2.2rem, 7vw, 4.5rem); font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin: 0 0 1.25rem; }
+  .contact p { max-width: 36rem; color: var(--muted); font-size: 1.1rem; margin: 0 0 2rem; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .pill.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+
+  footer { padding: 4rem 0 3rem; color: var(--muted); font-size: 0.85rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
 
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-  @media (max-width: 640px) {
-    body { font-size: 1.0625rem; }
-    .row { grid-template-columns: 1fr; }
-    .row > h2 { margin-bottom: 1.1rem; }
+  @media (max-width: 760px) {
+    .links { display: none; }
+    .grid { grid-template-columns: 1fr; }
+    .card { padding: 1.75rem; border-radius: 1.5rem; }
   }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .contact-list a { transition: none; }
-  }
-
-  @media print {
-    body { background: #fff; color: #000; }
-    .topbar nav { display: none; }
-    a { text-decoration: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .pill { transition: none; } }
+  @media print { .nav { position: static; } .links, .actions { display: none; } }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="topbar">
-    <span>rodbarit.github.io</span>
-    <nav aria-label="Sections">
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Rod Barit</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#work">Work</a>
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
     </nav>
-  </header>
+    <div class="actions">
+      <a href="https://github.com/rodbarit" target="_blank" rel="noopener" aria-label="GitHub (opens in a new tab)">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/rodbarit/" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a class="pill" href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <div class="intro">
-      <p class="kicker">Quantitative researcher &middot; Metro Manila</p>
-      <h1>Rod Christopher <em>L.&nbsp;Barit</em></h1>
-      <p class="creds">CFA &middot; CMT &middot; FRM</p>
-      <p class="lede">I build systematic investment strategies, and I care about getting financial services to the people who are left out of them.</p>
+<main id="top" class="wrap">
+
+  <div class="hero">
+    <h1><span class="soft">Hello.</span>I'm Rod Barit.</h1>
+    <p class="intro">I'm a quantitative researcher, Toastmasters charter president and Chevening Scholar, working toward financial inclusion through technology.</p>
+    <div class="tags">
+      <span class="tag">CFA</span><span class="tag">CMT</span><span class="tag">FRM</span>
+      <span class="tag">Chevening Scholar</span><span class="tag">Metro Manila, PH</span>
+    </div>
+  </div>
+
+  <section id="work">
+    <p class="label">Now</p>
+    <div class="grid">
+      <article class="card wide">
+        <p class="eyebrow now">Feb 2025 – present</p>
+        <h3>Quantitative Researcher</h3>
+        <p class="sub">Phitopolis · full-time, on-site</p>
+        <ul>
+          <li>Design and refine systematic investment strategies by analyzing academic and practitioner literature</li>
+          <li>Develop and backtest quantitative models in Python (pandas, NumPy, scikit-learn), applying machine learning to large-scale financial data to produce predictive trading signals</li>
+          <li>Run statistical analysis and modeling experiments to validate signals, manage risk and optimize strategy performance</li>
+          <li>Work with portfolio managers and engineers to turn research into deployable trading solutions</li>
+        </ul>
+      </article>
     </div>
 
-    <section id="about">
-      <div class="row">
-        <h2>About</h2>
-        <div>
-          <p>I'm a quantitative researcher with more than a decade across investment management, portfolio management and systematic trading research.</p>
-          <p>Today I'm a Quantitative Researcher at Phitopolis and a Lecturer at Ateneo de Manila University. I design and refine systematic strategies, using Python, machine learning and statistical modeling to build predictive trading signals and improve portfolio performance.</p>
-          <p>Before that I managed equity portfolios at Sun Life and the Bank of the Philippine Islands, across retirement and pre-need accounts. As a UK Government Chevening Scholar I completed an MSc in Finance Analytics at King's College London, with research on empirical asset pricing via machine learning in emerging markets.</p>
-          <p>Outside research, I'm a Toastmasters charter president, a civic technology advocate and a community builder, connecting people across finance, technology and public service.</p>
-          <p><span class="em">What I care about most:</span> financial inclusion through technology &mdash; using quantitative finance, machine learning and fintech to make financial systems more accessible and equitable, particularly for underserved communities in emerging markets.</p>
-        </div>
-      </div>
-    </section>
+    <p class="label" style="margin-top:3rem">Before</p>
+    <div class="grid">
+      <article class="card">
+        <p class="eyebrow">Aug 2025 – Dec 2025</p>
+        <h3>Lecturer</h3>
+        <p class="sub">Ateneo de Manila University · part-time, hybrid</p>
+        <ul>
+          <li>Taught finance and quantitative methods to graduate-level students</li>
+          <li>Brought practitioner insight from systematic trading research into the classroom</li>
+        </ul>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Oct 2021 – Jul 2023</p>
+        <h3>Equity Portfolio Manager</h3>
+        <p class="sub">Sun Life Philippines · full-time</p>
+        <ul>
+          <li>Managed equity funds across institutional and retail mandates</li>
+          <li>Used fundamental and technical analysis to drive investment decisions</li>
+          <li>Served concurrently as Equities Central Dealer (Jan 2017 – Oct 2022)</li>
+        </ul>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Dec 2014 – Dec 2016</p>
+        <h3>Associate Portfolio Manager</h3>
+        <p class="sub">Bank of the Philippine Islands (BPI)</p>
+        <ul>
+          <li>Managed the equity portfolio of retirement and pre-need accounts</li>
+          <li>Previously Investment Analyst (Jan 2013 – Nov 2014), covering equity research and financial analysis</li>
+        </ul>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Jun 2011 – Mar 2012</p>
+        <h3>Jesuit Volunteer</h3>
+        <p class="sub">Jesuit Volunteers Philippines Foundation, Inc. (JVPFI)</p>
+        <p>A year of community service, and the start of a lasting commitment to social impact.</p>
+      </article>
+    </div>
+  </section>
 
-    <section id="experience">
-      <div class="row">
-        <h2>Experience</h2>
-        <div>
-          <article class="job">
-            <p class="when now">Aug 2025 &ndash; present</p>
-            <h3>Lecturer</h3>
-            <p class="org">Ateneo de Manila University &middot; part-time, hybrid</p>
-            <ul>
-              <li>Teaching finance and quantitative methods to graduate-level students</li>
-              <li>Bringing practitioner insight from systematic trading research into the classroom</li>
-            </ul>
-          </article>
+  <section id="about">
+    <p class="label">About</p>
+    <div class="grid">
+      <article class="card wide">
+        <p class="statement">Financial inclusion through technology.</p>
+        <p>Using quantitative finance, machine learning and fintech to make financial systems more accessible and equitable, particularly for underserved communities in emerging markets.</p>
+      </article>
+      <article class="card">
+        <p>I'm a quantitative researcher with more than a decade across investment management, portfolio management and systematic trading research. I design and refine systematic strategies, using Python, machine learning and statistical modeling to build predictive trading signals and improve portfolio performance.</p>
+      </article>
+      <article class="card">
+        <p>Before that I managed equity portfolios at Sun Life and the Bank of the Philippine Islands. As a UK Government Chevening Scholar I completed an MSc in Finance Analytics at King's College London, with research on empirical asset pricing via machine learning in emerging markets.</p>      </article>
+    </div>
+  </section>
 
-          <article class="job">
-            <p class="when now">Feb 2025 &ndash; present</p>
-            <h3>Quantitative Researcher</h3>
-            <p class="org">Phitopolis &middot; full-time, on-site</p>
-            <ul>
-              <li>Design and refine systematic investment strategies by analyzing academic and practitioner literature</li>
-              <li>Develop and backtest quantitative models in Python (pandas, NumPy, scikit-learn), applying machine learning to large-scale financial data to produce predictive trading signals</li>
-              <li>Run statistical analysis and modeling experiments to validate signals, manage risk and optimize strategy performance</li>
-              <li>Work with portfolio managers and engineers to turn research into deployable trading solutions</li>
-            </ul>
-          </article>
+  <section id="skills">
+    <p class="label">Skills</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Quantitative finance</h3>
+        <div class="skillset"><span>Portfolio management</span><span>Systematic trading</span><span>Risk management</span><span>Technical analysis</span><span>Investment analysis</span><span>Bloomberg Terminal</span></div>
+      </article>
+      <article class="card">
+        <h3>Technology &amp; data</h3>
+        <div class="skillset"><span>Python</span><span>pandas</span><span>NumPy</span><span>scikit-learn</span><span>Machine learning</span><span>Data science</span><span>Big data analytics</span><span>Bash</span></div>
+      </article>
+      <article class="card wide">
+        <h3>Cloud &amp; research</h3>
+        <div class="skillset"><span>AWS ML Specialty</span><span>AWS AI Practitioner</span><span>Empirical asset pricing</span><span>Backtesting &amp; validation</span><span>Statistical modeling</span></div>
+      </article>
+    </div>
+  </section>
 
-          <article class="job">
-            <p class="when">Oct 2021 &ndash; Jul 2023</p>
-            <h3>Equity Portfolio Manager</h3>
-            <p class="org">Sun Life Philippines &middot; full-time</p>
-            <ul>
-              <li>Managed equity funds across institutional and retail mandates</li>
-              <li>Used fundamental and technical analysis to drive investment decisions</li>
-              <li>Served concurrently as Equities Central Dealer (Jan 2017 &ndash; Oct 2022)</li>
-            </ul>
-          </article>
+  <section id="education">
+    <p class="label">Education &amp; credentials</p>
+    <div class="grid">
+      <article class="card">
+        <div class="logos"><span class="logo"><img src="assets/logos/kcl.svg" alt="King's College London" loading="lazy"></span></div>
+        <p class="eyebrow">Sep 2023 – Sep 2024</p>
+        <h3>MSc Finance Analytics</h3>
+        <p class="sub">King's College London · UK Government Chevening Scholar</p>
+        <p>Research on empirical asset pricing via machine learning in emerging markets (Philippines). Focus on big data analytics and machine learning in finance.</p>
+      </article>
+      <article class="card">
+        <div class="logos"><span class="logo"><img src="assets/logos/ateneo.svg" alt="Ateneo de Manila University" loading="lazy"></span></div>
+        <p class="eyebrow">2010 – 2011</p>
+        <h3>Master's, Applied Mathematics</h3>
+        <p class="sub">Ateneo de Manila University · major in Mathematical Finance</p>
+        <p class="small">Also holds a bachelor's degree from Ateneo de Manila University.</p>
+      </article>
+      <article class="card">
+        <div class="logos"><span class="logo"><img src="assets/logos/cfa.svg" alt="CFA Institute" loading="lazy"></span><span class="logo"><img src="assets/logos/cmt.png" alt="CMT Association" loading="lazy"></span><span class="logo"><img src="assets/logos/garp.png" alt="GARP (Financial Risk Manager)" loading="lazy"></span></div>
+        <p class="eyebrow">Designations</p>
+        <h3>CFA · CMT · FRM</h3>
+        <p>Chartered Financial Analyst (CFA Institute), Chartered Market Technician (CMT Association), Financial Risk Manager (GARP).</p>
+      </article>
+      <article class="card">
+        <div class="logos"><span class="logo"><img src="assets/logos/aws.svg" alt="Amazon Web Services" loading="lazy"></span></div>
+        <p class="eyebrow">Amazon Web Services</p>
+        <h3>AWS certifications</h3>
+        <p>Certified Machine Learning – Specialty<br><span class="small">Issued Nov 2025 · expires Nov 2028</span></p>
+        <p>Certified AI Practitioner<br><span class="small">Issued Sep 2025 · expires Sep 2028</span></p>
+      </article>
+    </div>
+  </section>
 
-          <article class="job">
-            <p class="when">Dec 2014 &ndash; Dec 2016</p>
-            <h3>Associate Portfolio Manager</h3>
-            <p class="org">Bank of the Philippine Islands (BPI)</p>
-            <ul>
-              <li>Managed the equity portfolio of retirement and pre-need accounts</li>
-              <li>Previously Investment Analyst (Jan 2013 &ndash; Nov 2014), covering equity research and financial analysis</li>
-            </ul>
-          </article>
+  <section id="contact" class="contact" style="padding-top:6rem">
+    <h2>Let's talk.</h2>
+    <p>I'm open to roles in quantitative finance, fintech and financial technology leadership, including research, portfolio management, ML in finance, risk management and academia.</p>
+    <div class="contact-row">
+      <a class="pill" href="mailto:rodbarit@gmail.com">Email me</a>
+      <a class="pill ghost" href="https://www.linkedin.com/in/rodbarit/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="pill ghost" href="https://github.com/rodbarit" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+  </section>
 
-          <article class="job">
-            <p class="when">Jun 2011 &ndash; Mar 2012</p>
-            <h3>Jesuit Volunteer</h3>
-            <p class="org">Jesuit Volunteers Philippines Foundation, Inc. (JVPFI)</p>
-            <ul>
-              <li>A year of community service, and the start of a lasting commitment to social impact</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+  <footer>
+    <span>Rod Christopher L. Barit, CFA, CMT, FRM</span>
+    <span>Metro Manila, Philippines · © 2026</span>
+  </footer>
+</main>
 
-    <section id="skills">
-      <div class="row">
-        <h2>Skills</h2>
-        <dl>
-          <dt>Quantitative finance</dt>
-          <dd>Portfolio management, systematic trading, risk management, technical analysis, investment analysis, Bloomberg Terminal</dd>
-          <dt>Technology &amp; data</dt>
-          <dd>Python, pandas, NumPy, scikit-learn, machine learning, data science, big data analytics, Bash</dd>
-          <dt>Cloud &amp; research</dt>
-          <dd>AWS (Machine Learning Specialty, AI Practitioner), empirical asset pricing, backtesting and validation, statistical modeling</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="row">
-        <h2>Education &amp; credentials</h2>
-        <div>
-          <div class="edu">
-            <h3>MSc Finance Analytics</h3>
-            <p class="where">King's College London &middot; UK Government Chevening Scholar</p>
-            <p>Research on empirical asset pricing via machine learning in emerging markets (Philippines). Focus on big data analytics and machine learning in finance.</p>
-            <p class="small">Sep 2023 &ndash; Sep 2024</p>
-          </div>
-          <div class="edu">
-            <h3>Master's, Applied Mathematics</h3>
-            <p class="where">Ateneo de Manila University &middot; major in Mathematical Finance</p>
-            <p class="small">2010 &ndash; 2011</p>
-          </div>
-          <div class="edu">
-            <h3>Bachelor's degree</h3>
-            <p class="where">Ateneo de Manila University</p>
-          </div>
-          <div class="edu">
-            <h3>Professional designations</h3>
-            <p>Chartered Financial Analyst (CFA Institute), Chartered Market Technician (CMT Association), Financial Risk Manager (GARP).</p>
-          </div>
-          <div class="edu">
-            <h3>AWS certifications</h3>
-            <p>Certified Machine Learning &ndash; Specialty <span class="small">&middot; issued Nov 2025, expires Nov 2028</span></p>
-            <p>Certified AI Practitioner <span class="small">&middot; issued Sep 2025, expires Sep 2028</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="row">
-        <h2>Contact</h2>
-        <div>
-          <p>I'm open to roles in quantitative finance, fintech and financial technology leadership &mdash; including research, portfolio management, ML in finance, risk management and academia. If you're building in that space, I'd like to hear from you.</p>
-          <ul class="contact-list">
-            <li><a href="mailto:rodbarit@gmail.com"><span>Email</span><span class="hint">rodbarit@gmail.com</span></a></li>
-            <li><a href="https://www.linkedin.com/in/rodbarit/" target="_blank" rel="noopener"><span>LinkedIn<span class="sr-only"> (opens in a new tab)</span></span><span class="hint">in/rodbarit &#8599;</span></a></li>
-            <li><a href="https://github.com/rodbarit" target="_blank" rel="noopener"><span>GitHub<span class="sr-only"> (opens in a new tab)</span></span><span class="hint">rodbarit &#8599;</span></a></li>
-            <li><div class="static"><span>Based in</span><span class="hint">Metro Manila, Philippines</span></div></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>Rod Christopher L. Barit, CFA, CMT, FRM &middot; &copy; 2026</footer>
-</div>
 </body>
 </html>
